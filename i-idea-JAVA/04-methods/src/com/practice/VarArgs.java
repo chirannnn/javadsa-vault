@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class VarArgs {
     public static void main(String[] args) {
-        varArgs(1,2,3,4,5,6,7,8,9,0);
+
+        demo(1,2,3,4,5);
 
         demo("Sathish", "Purusoth", "Mani");
 
@@ -13,7 +14,7 @@ public class VarArgs {
         fun();
     }
 
-    static  void varArgs(int ...n){
+    static  void demo(int ...n){
         System.out.println(Arrays.toString(n));
     }
 
