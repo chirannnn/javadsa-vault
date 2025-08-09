@@ -2,7 +2,7 @@ package com.practice;
 
 import java.util.Arrays;
 
-public class VarArgs {
+public class VarArgs10 {
     public static void main(String[] args) {
 
         demo(1,2,3,4,5);

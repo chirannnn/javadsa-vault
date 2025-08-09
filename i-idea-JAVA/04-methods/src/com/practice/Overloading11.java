@@ -1,6 +1,6 @@
 package com.practice;
 
-public class Overloading10 {
+public class Overloading11 {
     public static void main(String[] args) {
 //        fun(2);
 //        fun("Kalai");
