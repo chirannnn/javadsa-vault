@@ -13,7 +13,7 @@ public class Palindromes08 {
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter a word : ");
-        String word = in.next();
+        String word = in.next().toLowerCase();
         String reversed = "";
 
         for(int i = word.length()-1; i >= 0 ; i--){
@@ -23,7 +23,7 @@ public class Palindromes08 {
         if(word.equals(reversed)){
             System.out.println(word + " is a palindrome");
         }else {
-            System.out.println(word + " is not a palidrome");
+            System.out.println(word + " is not a palindrome");
         }
 
     }
