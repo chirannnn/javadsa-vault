@@ -18,11 +18,22 @@ public class Main {
 
         // syntax
         // datatype[] variable_name = new datatype[size];
-        Scanner in = new Scanner(System.in);
-        int[] arr = new int[5];
-        for (int i = 0; i < arr.length; i++){
-            arr[i] = in.nextInt();
-        }
-        System.out.println(Arrays.toString(arr));
+        // store 5 roll numbers
+//        int[] ros = new int[5];
+//        // or directly
+//        int[] rnos2 = {1, 2, 3, 4, 5};
+
+        int[] ros; // declaration of array, ros is getting defined in the stack
+        ros = new int[5]; // initialisation : actually here object is being created in the memory (heap)
+
+//        System.out.println(ros[1]);
+
+        String[] str = new String[4];
+        System.out.println(str[0]);
+
+//        for (String element : str){
+//            System.out.println(element);
+//        }
+
     }
 }
