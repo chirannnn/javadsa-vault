@@ -11,13 +11,13 @@ public class SimpleInterest03 {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Enter the Principal (Amouunt of loan) : ");
+        System.out.print("Enter the Principal (Amount of loan) : ");
         float p = in.nextFloat();
 
         System.out.print("Enter the time (year) : ");
         float t = in.nextFloat();
 
-        System.out.print("Enter the rate (perentage) : ");
+        System.out.print("Enter the rate (percentage) : ");
         float r = in.nextFloat();
 
         float simpleInterest = p * t * r / 100;
