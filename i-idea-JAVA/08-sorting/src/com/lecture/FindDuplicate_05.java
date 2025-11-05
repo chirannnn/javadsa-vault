@@ -1,15 +1,14 @@
 package com.lecture;
+// https://leetcode.com/problems/find-the-duplicate-number/
 
-import java.util.Arrays;
-
-public class CyclicSort {
+public class FindDuplicate_05 {
     public static void main(String[] args) {
-        int[] arr = {5,3,4,1,2};
-        sort(arr);
-        System.out.println(Arrays.toString(arr));;
+        int[] nums = {1,3,4,2,2};
+
+        System.out.println(findDuplicate(nums));
     }
 
-    static void sort(int[] arr) {
+    static int findDuplicate(int[] arr) {
         int i = 0;
         while (i < arr.length) {
             int correct = arr[i] - 1;
@@ -19,6 +18,13 @@ public class CyclicSort {
                 i++;
             }
         }
+
+        for (int index = 0; index < arr.length; index++) {
+            if (arr[index] != index + 1) {
+                return arr[index];
+            }
+        }
+        return -1;
     }
 
     static void swap(int[] arr, int first, int second) {
