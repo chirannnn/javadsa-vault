@@ -1,7 +1,7 @@
 package com.lecture;
 // https://leetcode.com/problems/first-missing-positive/
 
-public class FirstMissingPositive {
+public class FirstMissingPositive_08 {
     public static void main(String[] args) {
         int[] nums = {1,2,0};
 
