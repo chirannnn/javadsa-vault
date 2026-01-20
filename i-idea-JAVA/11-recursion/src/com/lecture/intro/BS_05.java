@@ -1,9 +1,9 @@
 package com.lecture.intro;
 
-public class BS {
+public class BS_05 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 55, 66, 78};
-        int target = 78;
+        int target = 7;
 
         System.out.println(search(arr, target, 0, arr.length - 1));
     }
