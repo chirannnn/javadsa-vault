@@ -13,4 +13,8 @@ public class Fibo_04 {
         }
         return fibo(n - 1) + fibo(n - 2);
     }
+
+    static int fiboDormula(int n) {
+        return (int) ((Math.pow(((1+Math.sqrt(5))/2),n)-Math.pow(((1-Math.sqrt(5))/2),n))/Math.sqrt(5));
+    }
 }
