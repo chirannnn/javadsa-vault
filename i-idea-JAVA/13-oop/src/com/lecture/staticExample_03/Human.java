@@ -7,6 +7,11 @@ public class Human {
     boolean married;
     static long population;
 
+    static void message() {
+        System.out.println("Hello OOP");
+//        System.out.println(this.age); // cant use this over here
+    }
+
     public Human(int age, String name, int salary, boolean married) {
         this.age = age;
         this.name = name;
