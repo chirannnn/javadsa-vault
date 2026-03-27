@@ -4,6 +4,7 @@ public class Box {
     double l;
     double h;
     double w;
+    double weight;
 
     Box() {
         this.l = -1;
@@ -13,6 +14,7 @@ public class Box {
 
     // cube
     Box(double side) {
+//        super();  // object class
         this.l = side;
         this.h = side;
         this.w = side;
