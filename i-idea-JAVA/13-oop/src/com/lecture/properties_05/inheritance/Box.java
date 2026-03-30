@@ -1,10 +1,18 @@
 package com.lecture.properties_05.inheritance;
 
 public class Box {
-    double l;
+    private double l;
     double h;
     double w;
-    double weight;
+//    double weight;
+
+    static public void greeting() {
+        System.out.println("Hey, I am in Box class. Greetings!");
+    }
+
+    public double getL() {
+        return l;
+    }
 
     Box() {
         this.l = -1;
