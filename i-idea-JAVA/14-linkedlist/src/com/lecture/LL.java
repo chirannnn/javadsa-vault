@@ -47,10 +47,62 @@ public class LL {
             temp = temp.next;
         }
 
-        Node node = new Node(val, temp);
+        Node node = new Node(val);
+        node.next = temp.next;
         temp.next = node;
 
         size += 1;
+    }
+
+    public int deleteFirst() {
+        int val = head.value;
+        head = head.next;
+
+        if (head == null) {
+            tail = null;
+        }
+        size -= 1;
+        return val;
+    }
+
+    public int deleteLast() {
+        if (size <= 1) {
+            return deleteFirst();
+        }
+
+        Node secondLargest = get(size - 2);
+        int val = tail.value;
+        tail = secondLargest;
+        tail.next = null;
+        size -= 1;
+        return val;
+    }
+
+    public int delete(int index) {
+        if (index == 0) {
+            return deleteFirst();
+        }
+        if (index == size - 1) {
+            return deleteLast();
+        }
+
+        Node prev = get(index - 1);
+        int val = prev.next.value;
+
+        prev.next = prev.next.next;
+        size -= 1;
+        return val;
+    }
+
+    public Node find(int val) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == val) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
     }
 
     public Node get(int index) {
