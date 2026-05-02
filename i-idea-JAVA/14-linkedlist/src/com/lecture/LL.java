@@ -54,6 +54,22 @@ public class LL {
         size += 1;
     }
 
+    // insert using recursion
+    public void insertRec(int index, int val) {
+        head = insertRec(index, val, head);
+    }
+
+    private Node insertRec(int index, int val, Node node) {
+        if (index == 0) {
+            Node temp = new Node(val, node);
+            size += 1;
+            return temp;
+        }
+
+        node.next = insertRec(index-1, val, node.next);
+        return node;
+    }
+
     public int deleteFirst() {
         int val = head.value;
         head = head.next;
@@ -134,6 +150,70 @@ public class LL {
             this.value = value;
             this.next = next;
         }
+    }
+
+    // https://leetcode.com/problems/remove-duplicates-from-sorted-list
+    public void duplicate() {
+        Node node = head;
+
+        if (head == null) return;
+
+        while (node.next != null) {
+            if (node.value == node.next.value) {
+                node.next = node.next.next;
+                size -= 1;
+            } else {
+                node = node.next;
+            }
+        }
+
+        tail = node;
+        tail.next = null;
+    }
+
+    // https://leetcode.com/problems/merge-two-sorted-lists
+    public static LL merge(LL list1, LL list2) {
+        Node f = list1.head;
+        Node s = list2.head;
+
+        LL ans = new LL();
+
+        while (f != null && s != null) {
+            if (f.value < s.value) {
+                ans.insertLast(f.value);
+                f = f.next;
+            } else {
+                ans.insertLast(s.value);
+                s = s.next;
+            }
+        }
+
+        while (f != null) {
+            ans.insertLast(f.value);
+            f = f.next;
+        }
+        while (s != null) {
+            ans.insertLast(s.value);
+            s = s.next;
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        LL first = new LL();
+        LL second = new LL();
+
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+
+        LL ans = LL.merge(first, second);
+        ans.display();
     }
 
 }
