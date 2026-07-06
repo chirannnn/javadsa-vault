@@ -1,0 +1,10 @@
+package com.lecture.introduction;
+
+public class Main {
+    public static void main(String[] args) {
+        BinaryTree tree = new BinaryTree();
+        tree.populate();
+//        tree.display();
+        tree.prettyDisplay();
+    }
+}
