@@ -2,7 +2,7 @@ package com.lecture.introduction;
 
 public class BST {
 
-    private class Node {
+    private static class Node {
         private int value;
         private Node left;
         private Node right;
@@ -23,7 +23,10 @@ public class BST {
         this.root = null;
     }
 
-    public int height(Node node) {
+    public int height() {
+        return height(root);
+    }
+    private int height(Node node) {
         if (node == null) {
             return -1;
         }
